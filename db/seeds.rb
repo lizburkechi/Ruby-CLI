@@ -8,7 +8,7 @@ Walk.reset_pk_sequence
 def create_user
     user = User.create(
         username: Faker::TvShows::ParksAndRec.character,
-        dog_name: Faker::Games::Pokemon.name,
+        dog_name: Faker::Creature::Dog.name,
         dog_age: rand(0...15),
         breed: Faker::Creature::Dog.breed,
         likes_walks: [true, false].sample 
@@ -17,7 +17,7 @@ end
 
 def create_walker
     walker = Walker.create(
-        walker_name: Faker::TvShows::Simpsons.character
+        walker_name: Faker::Games::Pokemon.name
     )
 end
 
